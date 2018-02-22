@@ -1,0 +1,16 @@
+version: '2'
+services:
+    ebaypricer-mongodb:
+        image: mongo:3.4.10
+        ports:
+            - "27017:27017"
+        command: mongos --configdb ebaypricer-mongodb-config
+    ebaypricer-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    ebaypricer-mongodb-config:
+        image: mongo:3.4.10
+        container_name: ebaypricer-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
