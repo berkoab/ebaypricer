@@ -16,7 +16,7 @@
 logging:
     level:
         ROOT: DEBUG
-        com.berko.ebaypricer: DEBUG
+        com.berko.ebaypricer: ERROR
         io.github.jhipster: DEBUG
 
 spring:
@@ -32,7 +32,7 @@ spring:
         serialization.indent_output: true
     data:
         mongodb:
-            uri: mongodb://localhost:27017
+            uri: mongodb://berkoab:Gemorah1@bitcoinprices-shard-00-00-avqra.mongodb.net:27017,bitcoinprices-shard-00-01-avqra.mongodb.net:27017,bitcoinprices-shard-00-02-avqra.mongodb.net:27017/test?ssl=true&replicaSet=bitcoinprices-shard-0&authSource=admin
             database: ebaypricer
     mail:
         host: localhost
@@ -62,7 +62,7 @@ spring:
 #        key-alias: ebaypricer
 # ===================================================================
 server:
-    port: 8080
+    port: 8090
 
 # ===================================================================
 # JHipster specific properties
