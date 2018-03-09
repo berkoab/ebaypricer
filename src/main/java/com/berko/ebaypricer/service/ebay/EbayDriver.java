@@ -22,7 +22,6 @@ import org.w3c.dom.NodeList;
  *
  */
 public class EbayDriver {
-
     public final static String EBAY_APP_ID = "AryehBer-900e-4c58-8807-7bbf64dac2c5";
     public final static String EBAY_FINDING_SERVICE_URI = "http://svcs.ebay.com/services/search/FindingService/v1?";
 
@@ -131,6 +130,7 @@ public class EbayDriver {
             ebayResponse.setItemUrl((String) xpath.evaluate("viewItemURL", node, XPathConstants.STRING));
             ebayResponse.setGalleryUrl((String) xpath.evaluate("galleryURL", node, XPathConstants.STRING));
             ebayResponse.setCurrentPrice((String) xpath.evaluate("sellingStatus/currentPrice", node, XPathConstants.STRING));
+            ebayResponse.setCondition((String) xpath.evaluate("condition/conditionDisplayName", node, XPathConstants.STRING));
             ebayResponses.add(ebayResponse);
         }
 

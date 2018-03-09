@@ -7,6 +7,7 @@ public class EbayResponse {
     String itemUrl;
     String galleryUrl;
     String currentPrice;
+    String condition;
 
     public String getAckToken() {
         return ackToken;
@@ -54,5 +55,13 @@ public class EbayResponse {
 
     public void setCurrentPrice(String currentPrice) {
         this.currentPrice = currentPrice;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 }
